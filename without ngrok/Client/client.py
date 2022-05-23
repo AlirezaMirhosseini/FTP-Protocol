@@ -43,6 +43,7 @@ while True:
             with open(fileName, "wb") as file:
                 file.write(data)
             print('Done Recieving =)')
+            print(clientSocket.recv(1024).decode())
         tempClient.close()
     elif command[:2] == "CD":
         cleaned_data = clientSocket.recv(1024).decode()
